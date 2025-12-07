@@ -54,5 +54,5 @@ Here is a version with the brightness multiplied by 10
 ![Progress photo 4](/progressPhotos/progress4.PNG "progress photo 4")
 
 ### Note 10
-Followed another guide to add texture and shading to the accretion disk and I modified the color a bit.
+Followed another guide to add an accretion disk.
 ![Progress photo 5](/progressPhotos/progress5.PNG "progress photo 5")
