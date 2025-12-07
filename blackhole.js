@@ -3,6 +3,7 @@
 import * as three from 'three';
 import vertexShader from "./vertexShader.js";
 import fragmentShader from "./fragmentShader.js";
+import {OrbitControls} from './files/jsm/OrbitControls.js';
 
 const scene = new three.Scene();
 
@@ -25,7 +26,6 @@ const loader = new three.TextureLoader();
 const spaceTexture = loader.load('./8kSpace.jpg');
 spaceTexture.wrapS = three.RepeatWrapping;
 spaceTexture.wrapT = three.MirroredRepeatWrapping;
-// Optional: renderer.outputColorSpace and texture.colorSpace if using linear/sRGB, depending on your three.js version
 
 const canvasMaterial = new three.ShaderMaterial({
   uniforms: {

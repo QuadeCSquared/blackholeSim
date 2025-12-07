@@ -11,6 +11,9 @@ The following guide served as the core basis of the project: https://medium.com/
 ### Simulating a Schwarzschild Black Hole: Part 2 — The Accretion Disk
 The following guide served as the core basis of the project: https://medium.com/@cadenmarinozzi/simulating-a-schwarzschild-black-hole-part-2-the-accretion-disk-ff96f677e49c
 
+### Simulating a Schwarzschild Black Hole: Part 3— Adding Texture to the Disk
+The following guide served as the core basis of the project: https://medium.com/@cadenmarinozzi/simulating-a-schwarzschild-black-hole-part-3-adding-texture-to-the-disk-7a5725f72808
+
 ### fall2025csci445 Gitlab Repository
 https://gitlab.com/coloradomesa_cs/csci445fall2025/karl/-/tree/main?ref_type=heads
 
@@ -49,3 +52,7 @@ We got it working, though I changed the UV mapping to a spherical model.
 ![Progress photo 3](/progressPhotos/progress3.PNG "progress photo 3")
 Here is a version with the brightness multiplied by 10
 ![Progress photo 4](/progressPhotos/progress4.PNG "progress photo 4")
+
+### Note 10
+Followed another guide to add texture and shading to the accretion disk and I modified the color a bit.
+![Progress photo 5](/progressPhotos/progress5.PNG "progress photo 5")
