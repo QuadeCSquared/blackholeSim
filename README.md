@@ -44,3 +44,8 @@ The camera position and blackhole position are fine, if I am reading this right.
 ### Note 8
 Well I found an extra renderor.render(scene, camera) that I was supposed to remove that I didn't, but removing it didn't seem to do anything.
 
+### Note 9
+We got it working, though I changed the UV mapping to a spherical model.
+![Progress photo 3](/progressPhotos/progress3.PNG "progress photo 3")
+Here is a version with the brightness multiplied by 10
+![Progress photo 4](/progressPhotos/progress4.PNG "progress photo 4")
