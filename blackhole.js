@@ -30,17 +30,22 @@ spaceTexture.wrapT = three.MirroredRepeatWrapping;
 const canvasMaterial = new three.ShaderMaterial({
   uniforms: {
     uSpaceTexture: { value: spaceTexture },
-    uResolution: { value: new three.Vector2(width, height) }
+    uResolution: { value: new three.Vector2(width, height) },
+    uTime: { value: 0}
   },
   vertexShader,
   fragmentShader
 });
 
+const clock = new three.Clock();
 const canvasMesh = new three.Mesh(canvasGeometry, canvasMaterial);
 scene.add(canvasMesh);
 
 function animate() {
   requestAnimationFrame(animate);
+
+  canvasMaterial.uniforms.uTime.value = clock.getElapsedTime();
+
   renderer.render(scene, camera);
 }
 

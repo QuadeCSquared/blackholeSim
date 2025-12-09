@@ -2,6 +2,7 @@ export default `
   varying vec2 vUv;
   uniform sampler2D uSpaceTexture;
   uniform vec2 uResolution;
+  uniform float uTime;
   #define MAX_ITERATIONS 500
   #define STEP_SIZE 0.05
   #define PI 3.1415926535897932384626433832795
@@ -15,7 +16,7 @@ export default `
   const float flowRate = 0.6;
 
   float hash(float n) { 
-        return fract(sin(n) * 753.5453123); 
+        return fract(sin(n) * 753.5453123);
   }
 
   float noise(vec3 x) {
@@ -57,8 +58,6 @@ export default `
       vec3 rel = rayPos - blackholePos;
       float dist = length(rel);
 
-      
-
       if (dist < EVENT_HORIZON) {
         // swallowed by the black hole
         return vec4(0.0, 0.0, 0.0, 1.0);
@@ -72,7 +71,7 @@ export default `
 
         vec3 uvw = vec3(
           (atan(steppedRayPos.z, abs(steppedRayPos.x)) / TAU) - (diskTwist / sqrt(dist)), 
-          pow(diskDist / deltaDiskRadius, 2.0) + ((flowRate / TAU) / deltaDiskRadius), 
+          pow(diskDist * noise(vec3(uTime, uTime, uTime)) * 0.3 / deltaDiskRadius, 2.0) + ((flowRate * noise(vec3(uTime, uTime, uTime)) / TAU) / deltaDiskRadius),
           steppedRayPos.y * 0.5 + 0.5
         ) / 2.0;
 
@@ -85,7 +84,7 @@ export default `
         float velocity = dot(rayDir, shiftVector);
         float dopplerShift = sqrt((1.0 - velocity) / (1.0 + velocity));
         float gravitationalShift = sqrt((1.0 - 2.0 / dist) / (1.0 - 2.0 / length(camPos)));
-        return vec4(vec3(3,1.5,.5) * dopplerShift * gravitationalShift * opticalDepth, 1.0);
+        return vec4(vec3(1) * dopplerShift * gravitationalShift * opticalDepth, 1.0);
       }
       rayPos = steppedRayPos;
     }
@@ -102,6 +101,7 @@ export default `
 
     vec2 uv = vec2(u, v);
 
+    uv.x = fract(uv.x + uTime *0.005);
 
     color = texture2D(uSpaceTexture, uv);
     return color;
