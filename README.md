@@ -2,6 +2,11 @@
 
 ## Project Description
 This project aimed to use Three.js and the glsl language to simulate a blackhole in a 3d environment through a browser.
+
+### Original Contributions
+- Converted the texture mapping from a 2d PLane to a spherical mapping due to issues getting the fragment shader to load the texture properly.
+- Added a time uniform to allow for a more animated display of the simulation, including motion of the background and motion of the accretion disk.
+
 ### Technical
 I used the LivePreview VsCode extension to spin up a local server to view the render.
 
