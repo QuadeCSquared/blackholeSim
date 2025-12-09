@@ -56,3 +56,6 @@ Here is a version with the brightness multiplied by 10
 ### Note 10
 Followed another guide to add an accretion disk.
 ![Progress photo 5](/progressPhotos/progress5.PNG "progress photo 5")
+
+### Note 11
+Added a uTime uniform to allow me to have the background space texture move and add an illusion of motion. I also am using uTime as part of the accretion disk render, to give the disk a subtle illusion of motion. Its not perfect, but it does add a bit more visual interest.
