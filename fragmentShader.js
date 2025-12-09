@@ -101,7 +101,8 @@ export default `
 
     vec2 uv = vec2(u, v);
 
-    uv.x = fract(uv.x + uTime *0.005);
+    uv.x = fract(uv.x + uTime * 0.005);
+    uv.y - fract(uv.y + uTime * 0.01);
 
     color = texture2D(uSpaceTexture, uv);
     return color;
