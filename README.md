@@ -2,6 +2,8 @@
 
 ## Project Description
 This project aimed to use Three.js and the glsl language to simulate a blackhole in a 3d environment through a browser.
+### Technical
+I used the LivePreview VsCode extension to spin up a local server to view the render.
 
 ## References
 
